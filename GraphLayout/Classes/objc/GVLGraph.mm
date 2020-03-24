@@ -269,7 +269,7 @@ float _dpi = 72.0f;
 - (BOOL)loadLayout:(NSString *)text {
     const char *cp = [text cStringUsingEncoding:NSUTF8StringEncoding];
     Agraph_t *graph = agmemread(cp);
-    if (gvLayout(_context, graph, (char *)"dot") != 0) {
+    if (gvLayout(_context, graph, (char *)"neato") != 0) {
         return NO;
     }
     [_nodes removeAllObjects];

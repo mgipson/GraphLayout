@@ -81,7 +81,7 @@ public class Node: Equatable {
         return gvlNode?.getAttributeForKey(name)
     }
 
-    func setAttribute(name: String, value: String) {
+    public func setAttribute(name: String, value: String) {
         gvlNode?.setAttribute(value, forKey: name)
     }
 
@@ -127,6 +127,10 @@ public class Graph {
 
     public init() {
         gvlGraph = GVLGraph()
+    }
+    
+    public func setAttribute(name: String, value: String) {
+        gvlGraph?.setAttribute(value, forKey: name)
     }
 
     public func addNode(_ label: String) -> Node {
