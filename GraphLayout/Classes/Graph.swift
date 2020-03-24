@@ -28,7 +28,7 @@ public class Edge: Equatable {
         return gvlEdge?.getAttributeForKey(name)
     }
 
-    func setAttribute(name: String, value: String) {
+    public func setAttribute(name: String, value: String) {
         gvlEdge?.setAttribute(value, forKey: name)
     }
 
