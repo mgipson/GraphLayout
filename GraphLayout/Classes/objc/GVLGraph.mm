@@ -298,7 +298,7 @@ float _dpi = 72.0f;
 }
 
 - (BOOL)applyLayout {
-    if (gvLayout(_context, _graph, (char *)"neato") == 0) {
+    if (gvLayout(_context, _graph, (char *)"dot") == 0) {
         for (GVLNode *node in self.nodes) {
             [node prepare];
         }
