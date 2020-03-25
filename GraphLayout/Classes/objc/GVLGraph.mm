@@ -9,7 +9,7 @@
 #import "GVLGraph.h"
 
 extern gvplugin_library_t gvplugin_dot_layout_LTX_library;
-// extern gvplugin_library_t gvplugin_neato_layout_LTX_library;
+extern gvplugin_library_t gvplugin_neato_layout_LTX_library;
 extern gvplugin_library_t gvplugin_core_LTX_library;
 // extern gvplugin_library_t gvplugin_quartz_LTX_library;
 // extern gvplugin_library_t gvplugin_visio_LTX_library;
@@ -198,7 +198,7 @@ float _dpi = 72.0f;
 
         _context = gvContext();
         gvAddLibrary(_context, &gvplugin_dot_layout_LTX_library);
-        // gvAddLibrary(_context, &gvplugin_neato_layout_LTX_library);
+        gvAddLibrary(_context, &gvplugin_neato_layout_LTX_library);
         gvAddLibrary(_context, &gvplugin_core_LTX_library);
         _graph = agopen((char *)[name UTF8String], Agdirected, NULL);
 
